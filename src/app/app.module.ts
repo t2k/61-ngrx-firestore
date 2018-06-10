@@ -13,13 +13,18 @@ import { reducers } from './reducers';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
+
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component'; 
+
 
 import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PasswordlessAuthComponent
+
   ],
   imports: [
     BrowserModule,
