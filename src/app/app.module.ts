@@ -24,7 +24,6 @@ import { EffectsModule } from '@ngrx/effects';
   declarations: [
     AppComponent,
     PasswordlessAuthComponent
-
   ],
   imports: [
     BrowserModule,
