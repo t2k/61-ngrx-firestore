@@ -13,18 +13,13 @@ import { reducers } from './reducers';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
-
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component'; 
-
+import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component';
 
 import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PasswordlessAuthComponent
-  ],
+  declarations: [AppComponent, PasswordlessAuthComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,69 +30,12 @@ import { EffectsModule } from '@ngrx/effects';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     EffectsModule.forRoot([]),
-    PizzaModule,
+    PizzaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export class AppModule {}
 
 // export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
 //   return function(state, action) {

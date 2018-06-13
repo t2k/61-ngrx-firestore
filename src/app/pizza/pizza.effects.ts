@@ -1,15 +1,15 @@
-import { Injectable } from "@angular/core";
-import { Observable, from } from "rxjs";
-import { Action } from "@ngrx/store";
-import { Actions, Effect } from "@ngrx/effects";
-import { map, switchMap } from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { Observable, from } from 'rxjs';
+import { Action } from '@ngrx/store';
+import { Actions, Effect } from '@ngrx/effects';
+import { map, switchMap } from 'rxjs/operators';
 
-import * as actions from "./pizza.actions";
-import * as fromPizza from "./pizza.reducer";
+import * as actions from './pizza.actions';
+import * as fromPizza from './pizza.reducer';
 import {
   AngularFirestore,
   AngularFirestoreCollection
-} from "angularfire2/firestore";
+} from 'angularfire2/firestore';
 
 @Injectable()
 export class PizzaEffects {
@@ -19,7 +19,7 @@ export class PizzaEffects {
   @Effect()
   query$: Observable<Action> = this.actions$.ofType(actions.QUERY).pipe(
     switchMap(action => {
-      const ref = this.afs.collection<fromPizza.Pizza>("pizzas");
+      const ref = this.afs.collection<fromPizza.Pizza>('pizzas');
       return ref.snapshotChanges().pipe(
         map(arr => {
           return arr.map(doc => {
