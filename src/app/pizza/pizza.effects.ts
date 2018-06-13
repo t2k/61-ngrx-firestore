@@ -16,6 +16,7 @@ export class PizzaEffects {
   constructor(private actions$: Actions, private afs: AngularFirestore) {}
 
   // Listen for the 'QUERY' action, must be the first effect you trigger
+  // tslint:disable-next-line:member-ordering
   @Effect()
   query$: Observable<Action> = this.actions$.ofType(actions.QUERY).pipe(
     switchMap(action => {
@@ -36,6 +37,7 @@ export class PizzaEffects {
   );
 
   // Listen for the 'CREATE' action
+  // tslint:disable-next-line:member-ordering
   @Effect()
   create$: Observable<Action> = this.actions$.ofType(actions.CREATE).pipe(
     map((action: actions.Create) => action.pizza),
@@ -49,6 +51,7 @@ export class PizzaEffects {
   );
 
   // Listen for the 'UPDATE' action
+  // tslint:disable-next-line:member-ordering
   @Effect()
   update$: Observable<Action> = this.actions$.ofType(actions.UPDATE).pipe(
     map((action: actions.Update) => action),
@@ -63,6 +66,7 @@ export class PizzaEffects {
   );
 
   // Listen for the 'DELETE' action
+  // tslint:disable-next-line:member-ordering
   @Effect()
   delete$: Observable<Action> = this.actions$.ofType(actions.DELETE).pipe(
     map((action: actions.Delete) => action.id),
