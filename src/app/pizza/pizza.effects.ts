@@ -59,7 +59,6 @@ export class PizzaEffects {
       const ref = this.afs.doc<fromPizza.Pizza>(`pizzas/${data.id}`);
       return from(ref.update(data.changes));
     }),
-
     map(() => {
       return new actions.Success();
     })
