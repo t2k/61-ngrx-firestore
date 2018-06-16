@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { PizzaOrderComponent } from './pizza-order/pizza-order.component'
+import { PizzaOrderComponent } from './pizza-order/pizza-order.component';
 import { EffectsModule } from '@ngrx/effects';
 
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { pizzaReducer } from './pizza.reducer';
-import { PizzaEffects } from './pizza.effects'
+import { PizzaEffects } from './pizza.effects';
 
 @NgModule({
   imports: [
@@ -16,4 +16,4 @@ import { PizzaEffects } from './pizza.effects'
   exports: [PizzaOrderComponent],
   declarations: [PizzaOrderComponent]
 })
-export class PizzaModule { }
+export class PizzaModule {}
