@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -15,7 +16,6 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component';
 
 import { EffectsModule } from '@ngrx/effects';
 

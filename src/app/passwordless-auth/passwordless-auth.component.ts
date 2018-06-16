@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
+import { User } from 'firebase';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'passwordless-auth',
@@ -8,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./passwordless-auth.component.scss']
 })
 export class PasswordlessAuthComponent implements OnInit {
-  user;
+  user: Observable<User>;
   email: string;
   emailSent = false;
 
